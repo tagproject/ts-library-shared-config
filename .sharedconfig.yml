@@ -1,0 +1,120 @@
+sharedDir: '.config'
+outputDir: 'lib'
+
+mergeRules:
+  '.husky/commit-msg': true
+  '.vscode/launch.json': ['configurations']
+  '.gitignore': true
+  '.npmignore': true
+
+ignorePatterns:
+  '.gitignore':
+    [
+      '*.log',
+      '*.pid',
+      '*.pid.lock',
+      '*.seed',
+      '*.tgz',
+      '.env',
+      '.yarn-integrity',
+      '/.eslintcache',
+      '/.eslintignore',
+      '/.eslintrc',
+      '/.figma.yml',
+      '/.husky/',
+      '/jest.config.js',
+      '/rollup.config.js',
+      '/tsconfig.json',
+      'coverage',
+      'lib',
+      'logs',
+      'node_modules/',
+      'pids',
+      'tmp',
+      'tsconfig.tsbuildinfo',
+      'yarn-debug.log*',
+      'yarn-error.log*',
+    ]
+  '.npmignore':
+    [
+      '**/__benchmark__/**',
+      '**/__mocks__/**',
+      '**/__tests__/**',
+      '.changelogrc.yml',
+      '.config',
+      '.env',
+      '.eslintignore',
+      '.eslintrc',
+      '.figma.yml',
+      '.ghinfo',
+      '.gitattributes',
+      '.github',
+      '.husky',
+      'CODE_OF_CONDUCT.md',
+      'codecov.yml',
+      'codegen.yml',
+      'coverage/',
+      'docs/',
+      'example/',
+      'jest.config.js',
+      'media/',
+      'node_modules/',
+      'src/',
+      'tmp/',
+      'tsconfig.json',
+      'typings/',
+    ]
+  '.eslintignore': ['*.gql', '*.js', '__generated__', 'lib']
+  '.prettierignore': ['lib/']
+
+executableFiles: ['.husky/commit-msg', '.husky/pre-commit']
+
+scripts:
+  'build': 'npm-run-all build:*'
+  'build:ts': 'rimraf lib tmp && tsc --extendedDiagnostics && rollup -c && rimraf tmp'
+  'generate': 'npm-run-all generate:*'
+  'generate:changelog': 'node --experimental-specifier-resolution=node node_modules/.bin/changelog generate --bump'
+  'generate:ghinfo': 'node --experimental-specifier-resolution=node node_modules/.bin/ghinfo generate -d media -t utils'
+  'generate:media': 'node --experimental-specifier-resolution=node node_modules/.bin/figma-portal extract -d media -p GitHub'
+  'lint': 'npm-run-all lint:*'
+  'lint:eslint': 'rimraf coverage && eslint src --ext .ts'
+  'prepare': 'npm-run-all prepare:*'
+  'prepare:config': 'node --experimental-specifier-resolution=node node_modules/.bin/ts-library-shared-config'
+  'prepare:husky': 'husky install'
+  'release': 'npm-run-all prepare lint test build generate'
+  'test': 'npm-run-all test:*'
+  'test:jest': 'node --experimental-vm-modules node_modules/.bin/jest'
+
+dependencies:
+  - '@rollup/plugin-node-resolve': '13.x'
+  - '@tagproject/docs-shared-config': '1.x'
+  - '@tagproject/vscode-shared-config': '1.X'
+  - '@types/jest': '27.x'
+  - '@types/node': '17.x'
+  - '@typescript-eslint/eslint-plugin': '5.x'
+  - '@typescript-eslint/parser': '5.x'
+  - 'changelog-guru'
+  - 'eslint': '8.x'
+  - 'eslint-config-prettier': '8.x'
+  - 'eslint-plugin-import': '2.x'
+  - 'eslint-plugin-jest': '26.x'
+  - 'eslint-plugin-node': '11.x'
+  - 'eslint-plugin-optimize-regex': '1.x'
+  - 'eslint-plugin-promise': '6.x'
+  - 'figma-portal'
+  - 'ghinfo': '3.x'
+  - 'husky': '7.x'
+  - 'jest': '27.x'
+  - 'npm-run-all'
+  - 'rimraf'
+  - 'rollup': '2.x'
+  - 'rollup-plugin-copy': '3.x'
+  - 'rollup-plugin-filesize': '9.x'
+  - 'rollup-plugin-terser': '7.x'
+  - 'ts-jest': '27.x'
+  - 'typescript': '4.x'
+
+package:
+  manager: 'npm'
+  type: 'module'
+  types: './lib/index.d.ts'
