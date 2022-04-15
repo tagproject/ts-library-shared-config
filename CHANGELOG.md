@@ -1,6 +1,6 @@
 # :bug: Bug Fixes
 
-- Fix eslint rules, fix build:ts script [`82caf41`](https://github.com/tagproject/ts-library-shared-config/commit/82caf419816cb31fdb886c94e39b6777559363e7)
+- Remove type = module [`76eb8bd`](https://github.com/tagproject/ts-library-shared-config/commit/76eb8bd4ae43f425eff72139bee722c1a49fad6d)
 
 ---
 
