@@ -1,6 +1,6 @@
-# :bug: Bug Fixes
+# :memo: Internal changes
 
-- Remove type = module [`76eb8bd`](https://github.com/tagproject/ts-library-shared-config/commit/76eb8bd4ae43f425eff72139bee722c1a49fad6d)
+- Fix `config.js` path [`f24bcef`](https://github.com/tagproject/ts-library-shared-config/commit/f24bcefaed6beae2fe8a65e539bdbba2b140b487)
 
 ---
 
