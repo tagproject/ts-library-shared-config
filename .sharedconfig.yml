@@ -104,14 +104,14 @@ dependencies:
   - 'figma-portal'
   - 'ghinfo': '3.x'
   - 'husky': '7.x'
-  - 'jest': '27.x'
+  - 'jest': '28.x'
   - 'npm-run-all'
   - 'rimraf'
   - 'rollup': '2.x'
   - 'rollup-plugin-copy': '3.x'
   - 'rollup-plugin-filesize': '9.x'
   - 'rollup-plugin-terser': '7.x'
-  - 'ts-jest': '27.x'
+  - 'ts-jest': '28.x'
   - 'typescript': '4.x'
 
 package:
