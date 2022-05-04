@@ -1,16 +1,12 @@
 module.exports = {
-  preset: 'ts-jest/presets/default-esm',
-  extensionsToTreatAsEsm: ['.ts'],
+  testEnvironment: 'node',
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
   collectCoverage: true,
   coverageReporters: ['text-summary', 'lcov'],
-  testRegex: '(/__tests__/.*|(\\.|/)(test))\\.(tsx?)$',
+  testMatch: ['**/__tests__/**/*.test.(ts|tsx)'],
   testPathIgnorePatterns: ['<rootDir>/lib/', '<rootDir>/node_modules/'],
-  transform: {},
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   modulePathIgnorePatterns: ['<rootDir>/lib'],
-  globals: {
-    'ts-jest': {
-      useESM: true,
-    },
-  },
 };
