@@ -88,7 +88,7 @@ scripts:
 dependencies:
   - '@rollup/plugin-node-resolve': '13.x'
   - '@tagproject/docs-shared-config': '1.x'
-  - '@tagproject/vscode-shared-config': '1.X'
+  - '@tagproject/vscode-shared-config': '2.X'
   - '@types/jest': '27.x'
   - '@types/node': '17.x'
   - '@typescript-eslint/eslint-plugin': '5.x'
@@ -105,6 +105,7 @@ dependencies:
   - 'ghinfo': '3.x'
   - 'husky': '7.x'
   - 'jest': '28.x'
+  - 'jest-environment-jsdom': '28.x'
   - 'npm-run-all'
   - 'rimraf'
   - 'rollup': '2.x'
