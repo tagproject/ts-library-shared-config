@@ -1,17 +1,6 @@
-# Important Changes
-
-## Dependencies
-
-<details>
-<summary>Dev Dependencies</summary>
-
-- Changed **[@tagproject/vscode-shared-config](https://www.npmjs.com/package/@tagproject/vscode-shared-config)** from `^2.0.0` to `^2.0.1`
-
-</details>
-
 # :bug: Bug Fixes
 
-- Bump vscode shared config to `2.x` [`3348eb3`](https://github.com/tagproject/ts-library-shared-config/commit/3348eb31aaa8cfbbcececfc235d16c56544830e7)
+- Rewrite jest config to commonjs [`0da23b9`](https://github.com/tagproject/ts-library-shared-config/commit/0da23b9af1d169450e4f78116f345aa8ad71c771)
 
 ---
 

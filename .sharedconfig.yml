@@ -83,7 +83,7 @@ scripts:
   'prepare:husky': 'husky install'
   'release': 'npm-run-all prepare lint test build generate'
   'test': 'npm-run-all test:*'
-  'test:jest': 'node --experimental-vm-modules node_modules/.bin/jest'
+  'test:jest': 'jest'
 
 dependencies:
   - '@rollup/plugin-node-resolve': '13.x'
