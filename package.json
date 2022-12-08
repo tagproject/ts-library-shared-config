@@ -43,7 +43,7 @@
     "release": "npm-run-all prepare lint build generate"
   },
   "dependencies": {
-    "standard-shared-config": "^4.0.18"
+    "standard-shared-config": "^4.1.0"
   },
   "devDependencies": {
     "@tagproject/base-shared-config": "^3.3.5",
@@ -53,6 +53,6 @@
     "cspell": "^6.17.0",
     "husky": "^8.0.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.0"
+    "prettier": "^2.8.1"
   }
 }
