@@ -18,7 +18,7 @@ npm install @tagproject/ts-library-shared-config --save-dev
 
 - Add `"prepare:config": "ts-library-shared-config"` to `scripts` property in your `package.json`
 - Rename your `prepare` scripts to `prepare:[NAME]`
-- Add `"prepare": "npm-run-all prepare:*"`
+- Add `"prepare": "run-s prepare:*"`
 - Run `npm run prepare`
 
 ## Configs
@@ -66,13 +66,13 @@ npm install @tagproject/ts-library-shared-config --save-dev
 
 - [@rollup/plugin-node-resolve](https://www.npmjs.com/package/@rollup/plugin-node-resolve): `15.x`
 - [@rollup/plugin-terser](https://www.npmjs.com/package/@rollup/plugin-terser): `0.4.x`
-- [@tagproject/docs-shared-config](https://www.npmjs.com/package/@tagproject/docs-shared-config): `1.x`
-- [@tagproject/vscode-shared-config](https://www.npmjs.com/package/@tagproject/vscode-shared-config): `2.x`
+- [@tagproject/docs-shared-config](https://www.npmjs.com/package/@tagproject/docs-shared-config): `3.x`
+- [@tagproject/vscode-shared-config](https://www.npmjs.com/package/@tagproject/vscode-shared-config): `3.x`
 - [@types/jest](https://www.npmjs.com/package/@types/jest): `latest`
 - [@types/node](https://www.npmjs.com/package/@types/node): `latest`
 - [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin): `6.x`
 - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser): `6.x`
-- [changelog-guru](https://www.npmjs.com/package/changelog-guru): `latest`
+- [changelog-guru](https://www.npmjs.com/package/changelog-guru): `4.x`
 - [eslint](https://www.npmjs.com/package/eslint): `8.x`
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): `8.x`
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import): `2.x`
