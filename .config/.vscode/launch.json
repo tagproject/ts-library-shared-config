@@ -10,8 +10,7 @@
       "runtimeArgs": ["--experimental-vm-modules"],
       "args": ["--i", "--runInBand", "--coverage", "false", "${relativeFile}"],
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "disableOptimisticBPs": true
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
